@@ -1,0 +1,8 @@
+C:\Users\anwr.esaid\source\repos\OmnitroToolApp\OmnitroTool\Shared\bin\Debug\netstandard2.0\OmnitroTool.Shared.deps.json
+C:\Users\anwr.esaid\source\repos\OmnitroToolApp\OmnitroTool\Shared\bin\Debug\netstandard2.0\OmnitroTool.Shared.dll
+C:\Users\anwr.esaid\source\repos\OmnitroToolApp\OmnitroTool\Shared\bin\Debug\netstandard2.0\OmnitroTool.Shared.pdb
+C:\Users\anwr.esaid\source\repos\OmnitroToolApp\OmnitroTool\Shared\obj\Debug\netstandard2.0\OmnitroTool.Shared.AssemblyInfoInputs.cache
+C:\Users\anwr.esaid\source\repos\OmnitroToolApp\OmnitroTool\Shared\obj\Debug\netstandard2.0\OmnitroTool.Shared.AssemblyInfo.cs
+C:\Users\anwr.esaid\source\repos\OmnitroToolApp\OmnitroTool\Shared\obj\Debug\netstandard2.0\OmnitroTool.Shared.dll
+C:\Users\anwr.esaid\source\repos\OmnitroToolApp\OmnitroTool\Shared\obj\Debug\netstandard2.0\OmnitroTool.Shared.pdb
+C:\Users\anwr.esaid\source\repos\OmnitroToolApp\OmnitroTool\Shared\obj\Debug\netstandard2.0\OmnitroTool.Shared.csprojAssemblyReference.cache

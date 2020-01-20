@@ -1,0 +1,42 @@
+﻿@page "/productCatalogValidation"
+@using OmnitroTool.Shared
+@inject HttpClient Http
+@using System.Linq
+
+<h3>Product Catalog Validation</h3>
+<form class="form-inline">
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Product
+        </a>
+        <div class="dropdown-menu  pre-scrollable" aria-labelledby="dropdownMenuLink">
+            @foreach (var product in products)
+            {
+            <a class="dropdown-item" href="#" value="@product">@product</a>
+            }
+        </div>
+    </div>
+    <button type="button" class="btn btn-success" id="StartV">Start Catalog Validation</button>
+</form>
+<div id="ErrorField">
+    <h2>Errors</h2>
+<textarea rows="10" cols="100" id="errors">
+
+</textarea>
+</div>
+
+@code {
+    
+    //
+    List<string> products=new List<string>();
+    bool isloading = false;
+
+    protected override async Task OnInitializedAsync ()
+    {
+        
+        products = await Http.GetJsonAsync<List<string>>(@"http://localhost:63429/api/Products");
+        
+    }
+
+
+}

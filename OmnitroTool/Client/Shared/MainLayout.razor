@@ -1,0 +1,55 @@
+﻿@inherits LayoutComponentBase
+@using OmnitroTool.Shared
+@inject HttpClient Http
+@using System.Linq
+
+<div class="sidebar">
+    <NavMenu />
+</div>
+
+<div class="main">
+    <div class="top-row px-4">
+        <div class="dropdown" id="Tenants">
+
+            <a class="btn btn-secondary dropdown-toggle" role="button" id="topBar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tenant Name
+        </a>
+         
+            <div class="dropdown-menu" aria-labelledby="Tenant">
+               
+                @foreach (var cnt in tenants)
+                {
+                    <a class="dropdown-item" href="#"  value="@cnt">@cnt</a>
+                }
+
+                
+            </div>
+            
+        </div>
+        <div class="dropdown" id="User">
+            <a class="btn btn-secondary dropdown-toggle" role="button" id="topBar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                UserName
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="UserName">
+                <a class="dropdown-item" href="#">Log Out</a>
+                <a class="dropdown-item" href="#">Settings</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content px-4">
+        @Body
+    </div>
+</div>
+
+@code{
+        List<string> tenants = new List<string>();
+    protected override async Task OnInitializedAsync()
+    {
+        
+
+        tenants = await Http.GetJsonAsync<List<string>>(@"http://localhost:63429/api/Tenants");
+    }
+}
